@@ -3,7 +3,7 @@ import compression from 'compression';
 import type { NextFunction, Request, Response } from 'express';
 import express from 'express';
 import { serializeError } from 'serialize-error';
-
+import cors from 'cors';
 import * as clickhouse from './clickhouse';
 import * as config from './config';
 import { mongooseConnection } from './models';
@@ -16,6 +16,7 @@ if (!config.AGGREGATOR_PAYLOAD_SIZE_LIMIT) {
 }
 
 const app: express.Application = express();
+app.use(cors());
 
 const healthCheckMiddleware = async (
   req: Request,
