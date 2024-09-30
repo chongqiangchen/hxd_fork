@@ -20,7 +20,7 @@ export default function handler(
 ) {
   res.status(200).json({
     apiKey: HDX_API_KEY,
-    apiServerUrl: 'https://console.citobuzz.com',
+    apiServerUrl: 'http://5.223.46.24:8000',
     collectorUrl: 'http://5.223.46.24:4318',
     serviceName: HDX_SERVICE_NAME,
   });

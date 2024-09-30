@@ -1,5 +1,5 @@
-export const SERVER_URL = 'https://console.citobuzz.com'; // NEXT_PUBLIC_SERVER_URL can be empty string
-export const SERVER_URL_NEW = 'https://console.citobuzz.com'; // NEXT_PUBLIC_SERVER_URL can be empty string
+export const SERVER_URL = 'http://5.223.46.24:8000'; // NEXT_PUBLIC_SERVER_URL can be empty string
+export const SERVER_URL_NEW = 'http://5.223.46.24:8000'; // NEXT_PUBLIC_SERVER_URL can be empty string
 
 export const HDX_API_KEY = process.env.HYPERDX_API_KEY as string; // for nextjs server
 export const HDX_SERVICE_NAME =
