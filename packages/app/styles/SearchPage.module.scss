@@ -1,0 +1,68 @@
+@import './variables';
+
+.filtersPanel {
+  width: 200px;
+  max-height: 100%;
+  background-color: #00000030;
+  flex-shrink: 0;
+}
+
+.textButton {
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $slate-300 !important;
+  }
+
+  &:active {
+    color: $slate-500 !important;
+  }
+}
+
+.filterCheckbox {
+  width: 100%;
+  display: flex;
+  padding: 2px 6px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+
+  input {
+    opacity: 0.8;
+  }
+
+  .textButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+    padding: 0 8px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $slate-900;
+    }
+
+    &:active {
+      background-color: $slate-950;
+    }
+  }
+
+  &:hover {
+    input {
+      opacity: 1;
+    }
+
+    background-color: $slate-950;
+
+    .textButton {
+      display: block;
+    }
+  }
+}
